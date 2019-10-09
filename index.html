@@ -1,14 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Todolist App</title>
+    <link rel="stylesheet" href="./styles/main.css">
 </head>
+
 <body>
-    <div id="app"></div>
+    <div id="root" class='grid grid-2 vh-100'>
+        <div class="center  bg-success">
+            <input type="text" data-dom="createTodoInputBox">
+            <input type="submit" value="Add Todo" data-dom="createTodoInputSubmit">
+        </div>
+        <div class='center bg-warning'>
+            <ul data-dom="todolist">
+                <li data-dom-todoId='_id1101'>
+                    <span data-dom='todoItem'>Wash Plate</span>
+                    <button data-dom='deleteTodoItem'>Delete</button>
+                    <button data-dom='updateTodoItem'>Update</button>
+                </li>
+                <li data-dom-todoId='_id1103' class="done">
+                    <span data-dom='todoItem'>Wash Clothes</span>
+                    <button data-dom='deleteTodoItem'>Delete</button>
+                    <button data-dom='updateTodoItem'>Update</button>
+                </li>
+            </ul>
+        </div>
+    </div>
 
     <script src="./src/app.js"></script>
 </body>
+
 </html>
